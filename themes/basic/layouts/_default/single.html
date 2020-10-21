@@ -1,0 +1,6 @@
+{{ partial "header.html" . }}
+<strong>{{ .Title }}</strong><hr />
+<p>{{ .Content }}</p>
+<p><small>{{ .Date.Format "02 January 2006" }}</small></p>
+<p><a href="{{.Site.BaseURL}}/blog">index</a></p>
+{{ partial "footer.html" . }}

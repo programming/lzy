@@ -1,0 +1,8 @@
+{{ partial "header.html" . }}
+{{ range (.Paginator 20).Pages }}
+<article><a href="{{ .RelPermalink }}">{{ .Title }}</a></article>
+{{ end }}
+{{ if .Paginator.HasNext }}
+<a href="{{ .Paginator.Next.URL }}">more</a>
+{{ end }}
+{{ partial "footer.html" . }}
